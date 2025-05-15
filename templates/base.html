@@ -39,16 +39,10 @@ https://www.tooplate.com/view/2114-pixie
             <span>
               {% if uuser.is_authenticated %}
                   {{ user.username | title }}
+                  <a href="{% url 'auth:logout' %}" class="btn btn-light btn-sm">Выйти</a>
               {% else %}
-                  Гость
-              {% endif %}
-
-              {% for item in items %}
-                  {{ item }}
-              {% endfor %}
-
-
-              {#{{ user.is_active }}#}</span>
+                  <a href="{% url 'auth:login' %}" class="btn btn-light btn-smg"></a>
+             </span>
           </div>
         </div>
       </div>
